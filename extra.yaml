@@ -1,0 +1,4 @@
+instance_name_prefix = event.get('instance_name_prefix', 'default_prefix')
+for instance in response['DBInstances']:
+    if instance['DBInstanceIdentifier'].startswith(instance_name_prefix):
+        filtered_instances.append(instance)
